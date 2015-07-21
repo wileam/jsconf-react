@@ -10,18 +10,30 @@ import httpClient from 'axios';
   renders the error message if one occurs.
  */
 
+//class App extends React.Component {
+//  render() {
+//    const items = this.props.items;
+//    return (
+//      <div>
+//        <ul>
+//          { items.map(item =>
+//            <li key={item.id}>{item.name}</li>) }
+//        </ul>
+//        <div className="devHelp">(REST data fetched and rendered in src/browser.jsx)</div>
+//      </div>
+//    );
+//  }
+//}
+
 class App extends React.Component {
   render() {
     const items = this.props.items;
+    console.log(items);
     return (
-      <div>
-        <ul>
-          { items.map(item =>
-            <li key={item.id}>{item.name}</li>) }
-        </ul>
-        <div className="devHelp">(REST data fetched and rendered in src/browser.jsx)</div>
-      </div>
-    );
+      <ul>
+        { items.map(item => <li>{item.name}</li>) }
+      </ul>
+    )
   }
 }
 
