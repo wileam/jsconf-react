@@ -28,10 +28,10 @@ import httpClient from 'axios';
 class App extends React.Component {
   render() {
     const items = this.props.items;
-    console.log(items);
+    // console.log(items);
     return (
       <ul>
-        { items.map(item => <li>{item.name}</li>) }
+        { items.map(item => <li key={item.id}>{item.name}</li>) }
       </ul>
     )
   }
